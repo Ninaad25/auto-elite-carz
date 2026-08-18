@@ -29,4 +29,8 @@ pnpm-debug.log*
 
 # Prisma
 *.db
-*.db-journal
+*.db-journalbackend/auto_elite_carz_backup.sql
+
+# Database backups
+auto_elite_carz_backup.sql
+auto_elite_carz_data.sql
