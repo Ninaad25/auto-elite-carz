@@ -12,21 +12,24 @@ import enquiryRoutes from "./routes/enquiry.routes.js";
 import favouriteRoutes from "./routes/favourite.routes.js";
 import prisma from "./lib/prisma.js";
 
+
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+
 app.use(cors());
 app.use(express.json());
-
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 app.use("/api/cars", carRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/enquiries", enquiryRoutes);
 app.use("/api/favourites", favouriteRoutes);
+
+app.use("/uploads", express.static("uploads"));
 
 app.get("/", (_req, res) => {
   res.json({
