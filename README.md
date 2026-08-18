@@ -390,7 +390,7 @@ Screenshots can be added here to showcase the application.
 
 <h2>🏠 Homepage</h2>
 
-<img src="./screenshots/homepage.png" alt="Auto Elite Carz Homepage" width="900"/>
+<img src="./screenshots/homepage.png" alt="Auto Elite Carz Homepage" width="900" height="600"/>
 
 <h2>🚘 Car Catalogue</h2>
 
