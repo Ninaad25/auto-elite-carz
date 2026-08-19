@@ -746,7 +746,7 @@ function AdminCarForm() {
                         src={
                           image.imageUrl.startsWith("http")
                             ? image.imageUrl
-                            : `http://localhost:5001${image.imageUrl}`
+                            : `${import.meta.env.VITE_API_URL?.replace("/api", "") || "http://localhost:5001"}${image.imageUrl}`
                         }
                         alt="Car"
                         className="aspect-square w-full object-cover"

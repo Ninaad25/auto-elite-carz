@@ -149,7 +149,7 @@ function AdminCars() {
         ) : (
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[900px]">
+              <table className="w-full min-w-225">
                 <thead className="border-b border-slate-200 bg-slate-50">
                   <tr>
                     <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-slate-500">
@@ -193,7 +193,7 @@ function AdminCars() {
                             <img
                               src={
                                 image.startsWith("/")
-                                  ? `http://localhost:5001${image}`
+                                  ? `${import.meta.env.VITE_API_URL?.replace("/api", "") || "http://localhost:5001"}${image}`
                                   : image
                               }
                               alt={`${brand} ${model}`}

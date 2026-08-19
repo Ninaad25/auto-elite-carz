@@ -259,10 +259,9 @@ function Favourites() {
               car.images?.[0]?.imageUrl ||
               "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=900&q=80";
 
-            const imageUrl =
-              image.startsWith("http")
-                ? image
-                : `http://localhost:5001${image}`;
+            const imageUrl = image.startsWith("http")
+              ? image
+              : `${import.meta.env.VITE_API_URL?.replace("/api", "") || "http://localhost:5001"}${image}`;
 
             return (
               <article
